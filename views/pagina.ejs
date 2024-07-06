@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enjoi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Enlace al archivo CSS de Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous" type="application/css" >
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="css/main.css" type="application/css">
+</head>
+
+<body style="background-color:#98ccfc">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <!-- navbar-expand-sm :indica barra se muestra expandida
+            a partir de 576px colapsa para tamaños mas pequeños
+            https://ajgallego.gitbook.io/bootstrap-4/componentes-responsive/barra-de-navegacion
+      -->
+    <div class="container-fluid">
+      <!-- para boostrap esqueleto contenedor fluido container-fluid :Ancho 
+        variable que se adapte al ancho del navegador.-->
+      <a class="navbar-brand" href="#">
+
+        <!--navbar-brand  indicara nombre Sitio o logotipo -->
+        <img src="images/logo.png "   width="100" alt="an image">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- navbar-toggler es el boton toggler se mostrara al colapsar  
+         aria-controls : asocia programáticamente el elemento o 
+          elementos correspondientes con el elemento controlador.-->
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- collapse navbar-collapse caja que se define  la 
+              zona en la cual 
+                se ocultara para pequeñas pantallas -->
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!--soporte para menu desplegable Dentro de la clase navbar-nav se definen opciones 
+                de menu
+                 mediante 
+               nav-item
+               El margin controla la distancia entre los elementos separados en la página. Padding establece la distancia entre el contenido y los bordes del elemento que lo contiene.   
+               utilidades de margen como .me-auto para aleja las columnas hermanas entre sí.
+             Las clases se nombran utilizando el formato {property}{sides}-{size}for xsy {property}{sides}-{breakpoint}-{size}for sm, md, lgy xl.
+             m es propiedad b es sides lg punto de ruptura 
+             mb-lg-0 :establece 
+              m- para las clases que establecen margin
+               b- para clases que establecen margin-bottom
+               o padding-bottom lo elimina con 0 para punto de ruptura lg
+             mb-2 : spacer * .5 -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <h4> Inicio</h4>
+            </a>
+            <!--- cada elemento de la lista menu se define con
+                       etiqueta li dentro
+                        de una clase nav-item -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pagina/administrar">
+              <h3> Administrar</h3>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./formulario.html">
+               Contacto
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <h4> Menu</h4>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Reservas</a></li>
+              <li><a class="dropdown-item" href="#"> Hoteles</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Escursiones</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex justify-content-lg-start " role="search">
+          <!-- d-flex  transforma a sus hijos en flex items-->
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <h1 style=" color: rgb(225, 235, 244);">Descubrir</h1>
+  <!-- CAROUSEL-->
+  <div class="px-wide">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="images/usuahia.jpg" class="d-block w-100" alt="usuahia">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="images/hotel00.jpg" class="d-block w-100" alt="Montañas">
+        </div>
+        <div class="carousel-item">
+          <img src="images/hoteles07.jpg" class="d-block w-100" alt="Ensueño">
+        </div>
+        <div class="carousel-item">
+          <img src="images/hotel05.jpg" class="d-block w-100" alt="recepcion">
+
+        </div>
+        <div class="carousel-item">
+          <img src="images/comidaHotel.jpg" class="d-block w-100" alt="Resto">
+
+        </div>
+        <div class="carousel-item">
+          <img src="images/hotel03.jpg" class="d-block w-100" alt="Resto">
+
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <h1 style=" color: aliceblue;">Disfrutar</h1>
+  </div>
+
+  <!-- CAROUSEL-->
+
+
+  <!-- Enjoi-->
+  <div id="games">
+    <div class="container-md p-5">
+
+      <div class="row pt-5">
+        <h3 id="Momentos" style=" color: aliceblue;" class="text-center pb-5 pt-5 h1">Los Mejores Momentos </h3>
+      </div>
+
+      <div class="row">
+        <div class="col-sm">
+          <div class="card w-100 card-border mb-5">
+            <img src="images/card1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+
+              <h1 class="card-text"> Siempre</h1>
+              <i class="fas fa-wine-glass"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card w-100 card-border mb-5">
+            <img src="images/card21.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">Donde sea </p>
+              <i class="fas fa-plane"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card w-100 card-border mb-5">
+            <img src="images/viajes.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">En cualquier lugar </p>
+               <i class="fas fa-globe-europe"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row py-5">
+        <div class="col">
+          <h3 class="text-center" style="color: var(--bs-blue)">Mas Informacion:</h3>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-2"><a href="#">Nosotros</a></div>
+        <div class="col-2"><a href="#">Convenios</a></div>
+        <div class="col-1"><a href="#">Oferta Turistica 2024</a></div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+  
+    <a href="#" class="btn btn-primary stretchet-link"> Promociones</a>
+    <div class="row justify-content-center align-items-center">
+      <div class="col-3 d-none d-md-block">
+        <!-- d-none: oculta establece display none
+            https://getbootstrap.esdocu.com/docs/5.1/utilities/display/
+             d-md-block: establece
+          block en pantallas md lg xl xxl -->
+        <h1 style=" color: aliceblue;">Ver</h1>
+      </div>
+      <div class="col-9">
+
+        <div class="row justify-content-md-center">
+          <div class="col p-1">
+            <!-- Las clases .col-* pueden usarse fuera de un .row 
+                para darle a un elemento un ancho específico-->
+            <div class="card bg-primary text-white">
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="images/esqui.jpg" class="w-100" alt="Esqui">
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <h5 class="card-title">El bolson</h5>
+                    <p class="card-text">
+                      ¡Una semana inolvidable! </p>
+
+
+
+                  </div><!--card-body-->
+                </div><!--col-->
+              </div><!--row-->
+            </div><!--CARD-->
+          </div><!--col-->
+
+          <div class="col p-1">
+            <div class="card bg-warning text-white">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <h5 class="card-title">Mar de las Pampas</h5>
+                    <p class="card-text">A escasos 150 mts de la playa </p>
+                  </div><!--card-body-->
+                </div>
+                <div class="col-md-6">
+                  <img src="images/MarPampas.jpg" class="w-100" alt="Mar">
+                </div><!--col-->
+              </div><!--row-->
+            </div><!--CARD-->
+          </div>
+        </div>
+        <div class="row  justify-content-md-center">
+          <div class="col p-1">
+            <div class="card bg-danger text-white">
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="images/SanAndes.jpg" class="w-100" alt="Andes">
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <h5 class="card-title"> San Martin de los Andes </h5>
+                    <p class="card-text"> Tu apart</p>
+
+                  </div><!--card-body-->
+                </div><!--col-->
+              </div><!--row-->
+            </div><!--CARD-->
+          </div>
+          <div class="col p-1">
+            <div class="card bg-success text-white">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <h5 class="card-title">Villa Gesell</h5>
+                    <p class="card-text"> Amanece junto al mar.</p>
+                  </div><!--card-body-->
+                </div>
+                <div class="col-md-6">
+                  <img src="images/VillaGessel.jpg" class="w-100" alt="Gessel">
+                </div><!--col-->
+              </div><!--row-->
+            </div><!--CARD-->
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div id="footer" class="p-5">
+      <div class="container w-50 pt-5">
+        <div class="row row-cols-md-2 justify-content-md-center">
+          <div class="col text-center">
+            <a href="#" class="btn btn-lg rounded-pill btn-warning w-100  p-3 shadow-sm font-weight-bold">Asociate
+            </a>
+
+          </div>
+        </div>
+        <div class="row justify-content-md-center py-5">
+          <div class="col text-center font-weight-light">
+            <p> Enjoi S.A. - EVT - Legajo: 16181 - Disp: 577/2000 - CUIT: 30­-911900-­7 </p>
+            <p>El titular de los datos personales tiene la facultad de ejercer el derecho de acceso a los mismos en
+            <p>
+            <p> forma gratuita a intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo al
+            </p>
+            <p> efecto conforme lo establecido en el artículo 14, inciso 3 de la Ley Nº 25.326. La Dirección Nacional de
+            </p>
+            <p>Protección de Datos de Personas, Órgano de Control de la Ley Nº 25.326, tiene la atribución de atender
+              las
+              denuncias </p>
+            <p> y reclamos que se interpongan </p>
+            <p>con relación al incumplimiento de las normas sobre protección de datos personales.</p>
+
+          </div>
+
+        </div>
+        <div class="row"></div>
+      </div>
+    </div>
+
+    <span class="d-block p-2 bg-dark text-white">© 2024 - Enjoi S.A. - EVT - 16181 su Opción Turística - EVT. 18.658
+      <img src="images/logo.png" alt="" width="100"></span>
+    <!-- Enlace a los archivos JavaScript de Bootstrap 5 y Popper en un solo archivo (bootstrap.bundle.min.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   
+</body>
+
+</html>
+
+<!-- Promociones
+<div id="play">
+    <div class="container-sm p-5">
+     las tarjetas no tienen margin por eso usar espaciado p define el
+        relleno alrededor del elemento p-5
+      afecta al relleno padding multiplicandolo por *0.5 margen / relleno 
+    48 px 0 – 0px margen/relleno.
+1 – 4px margen/relleno.
+2 – 8px margen/relleno.
+3 – margen/relleno de 16 px.
+4 – 24px margen/relleno.
+5 – margen/relleno de 48 px.-->
+ <!--<script src="js/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+-->

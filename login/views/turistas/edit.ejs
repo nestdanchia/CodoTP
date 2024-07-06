@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Editar Turista</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body class="container" style="margin-top: 50px;">
+    <%- include('nav.html') %>
+	<h1>TP</h1>
+    	<br>
+        <% if (messages.error) { %>
+            <div class="alert alert-danger" role="alert"><%- messages.error %></div>
+            <% } %>
+    <div class="card"> 
+    	<div class="card-header">
+			Editar Turista
+		</div>
+        <div class="card-body">
+            <form action="/turistas/update/<%= id %>" method="post">
+                <div class="form-group">
+                    <label>Nombre:</label>
+                    <input type="text" class="form-control" name="nombre" value="<%= nombre %>" autocomplete="off">
+                </div>
+				<div class="form-group">
+                    <label>Apellido:</label>
+                    <input type="text" class="form-control" name="apellido" value="<%= apellido %>" autocomplete="off">
+                </div>
+				<div class="form-group">
+                    <label>Direccion:</label>
+                    <input type="text" class="form-control" name="direccion" value="<%= direccion %>" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-info" value="Update"/>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
